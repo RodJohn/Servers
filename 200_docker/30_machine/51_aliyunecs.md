@@ -24,6 +24,6 @@ https://github.com/AliyunContainerService/docker-machine-driver-aliyunecs/issues
 3.创建虚拟机
 
     docker-machine create -d aliyunecs  --aliyunecs-instance-type=ecs.n1.tiny  --aliyunecs-io-optimized=optimized  dev1
-    注意驱动类型,实例类型,io优化
+    注意驱动类型,实例类型,io优化,地区
     
     
