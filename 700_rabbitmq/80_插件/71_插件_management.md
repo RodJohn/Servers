@@ -3,11 +3,13 @@
 
 #安装
 
-　1.首先创建目录，否则可能报错：mkdir /etc/rabbitmq
-    2.启用插件：/sbin/rabbitmq-plugins enable rabbitmq_management
-    3.开启端口15672的防火墙
-    4.然后访问http://localhost:15672即可,
+　1.首先创建目录，否则可能报错：mkdir -p /etc/rabbitmq
+  2.启用插件：/sbin/rabbitmq-plugins enable rabbitmq_management
+  3.开启端口15672的防火墙
+  4.然后访问http://localhost:15672即可,
 默认用户guest 密码guest
+
+
 默认用户只可在localhost上连至/且有全部权限
     5.开启远程访问
 　　默认网页是不允许访问的，需要增加一个用户修改一下权限，代码如下：
