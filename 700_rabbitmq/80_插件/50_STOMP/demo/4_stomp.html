@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>stomp</title>
+</head>
+<body>
+
+</body>
+<script src="jquery.js"></script>
+<script src="stomp.js"></script>
+<script src="sockjs.js"></script>
+<script type="text/javascript">
+    
+
+    var client = Stomp.client('ws://192.168.203.122:15674/ws');
+
+    var on_connect = function(x) {
+        var channel = "/topic2/test";
+        id = client.subscribe(channel, function(d) {
+            console.log("from--"+channel+d.body);
+        });
+        client.send(channel, {"content-type":"text/plain"}, " my data  李俊");
+        //client.send("/topic/test", {"content-type":"text/plain"}, " my data  李俊");
+    };
+    var on_error =  function() {
+        console.log('error');
+    };
+
+    client.connect('admin', 'admin', on_connect, on_error, '/');
+
+
+</script>
+
+</html>
