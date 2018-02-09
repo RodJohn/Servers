@@ -19,3 +19,10 @@ NOTE: /f在这里意为强制结束进程
 也可以使用pid杀：
 
 taskkill /pid {pid}
+
+
+
+
+# 使用复制黏贴
+
+http://blog.csdn.net/crazygolf/article/details/37907511
