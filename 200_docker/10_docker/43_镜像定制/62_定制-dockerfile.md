@@ -1,10 +1,19 @@
 
+# 概述
 
+    用于自动化定制镜像
 
-# FROM *
+# 基础设置 
+
+## FROM *
 
 	指定基础镜像
 	FROM 是必备的指令，并且必须是第一条指令。
+	
+## MAINTAINER 
+
+    用于指定镜像创建者和联系方式。 
+    MAINTAINER <author name> 	
 
 # VOLUME *
 
@@ -25,8 +34,18 @@
     COPY <源路径>... <目标路径>
     
 
+## WORKDIR
 
-    
+    WORKDIR /path/to/work/dir 配合 RUN，CMD，ENTRYPOINT 命令设置当前工作路径。
+    可以设置多次，如果是相对路径，则相对前一个 WORKDIR 命令。默认路径为/。
+
+# ENV 
+
+设置环境变量
+格式有两种：
+
+ENV <key> <value>
+ENV <key1>=<value1> <key2>=<value2>...    
     
 # ADD
 
@@ -97,19 +116,26 @@
     
     CMD ["nginx", "-g", "daemon off;"]    
 
-# CMD
+
+# 默认目标进程 *
+
+    用于设置默认进程
+    因为启动容器的追踪目的就是运行某个进程
+    一个 Dockerfile 中只能有一个，如果有多个，则最后一个生效。
+
+## CMD
 
 作用
     
-    CMD 指定容器默认的启动命令的
-    在运行时指定的命令会替代掉这个默认命令
+    指定容器默认启动的进程
+    但如果在运行时指定的命令会替代掉这个默认命令
 
-命令
+格式
 
     CMD 指令的格式和 RUN 相似，也是shell和exec两种.
     
 
-# ENTRYPOINT *
+## ENTRYPOINT *
 
 作用
 

@@ -52,7 +52,8 @@
 命令
 
 	docker container ls 
-	查看运行的容器,注意NAMES在最后一行 
+	查看运行的容器,注意NAMES在最后一行
+	相当于docker ps  
 	
 参数
 

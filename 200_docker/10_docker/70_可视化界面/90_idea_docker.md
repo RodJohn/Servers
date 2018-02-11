@@ -67,8 +67,10 @@
 
     选择服务器,镜像名,容器名
     配置dockerfile
-    配置执行命令   直接写完整即可
-    配置端口
+    配置执行命令   
+        直接写完整即可
+    配置端口 
+        填入hostport:containerport 
 
 ## 操作container
 
