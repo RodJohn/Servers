@@ -1,6 +1,11 @@
 
+# 概述
 
-# docker设置
+    将idea作为客户端远程管理docker服务.
+    
+
+
+# docker服务设置
 
 ## win10 
 
@@ -16,7 +21,7 @@
 ## linux 
 
 
-# idea设置
+# idea客户端设置
 
 ## 安装插件
 
@@ -32,12 +37,14 @@
     
     1.win10本地 ,选择tcp socket ,和默认url ,无需证书文件
     
-    
-设置成功可以看到connection successful 字样    
+效果 
+   
+    设置成功可以看到connection successful 字样    
     
 ## 设置docker注册中心
 
     设置地址和验证信息
+
 
 
 # idea操作

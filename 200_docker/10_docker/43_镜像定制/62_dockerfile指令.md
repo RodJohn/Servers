@@ -117,6 +117,8 @@ ENV <key1>=<value1> <key2>=<value2>...
     CMD ["nginx", "-g", "daemon off;"]    
 
 
+
+
 # 默认目标进程 *
 
     用于设置默认进程
@@ -141,11 +143,11 @@ ENV <key1>=<value1> <key2>=<value2>...
 
     ENTRYPOINT 的目的和 CMD 一样，都是在指定容器启动程序及参数。
     特点1
-        在运行时指定的命令会作为默认命令的新的参数
+        在运行时指定的命令会作为该默认命令的新的参数
     特点2    
-        当指定了 ENTRYPOINT 后，CMD 的含义就发生了改变，不再是直接的运行其命令，而是将 CMD 的内容作为参数传给 ENTRYPOINT 指令，换句话说实际执行时，将变为：<ENTRYPOINT> "<CMD>"
-
-命令
+        当指定了 ENTRYPOINT 后，CMD 的含义就发生了改变，
+        不再是直接的运行其命令，而是将 CMD 的内容作为参数传给 ENTRYPOINT 指令，
+        换句话说实际执行时，将变为：<ENTRYPOINT> "<CMD>"
 
     
     
