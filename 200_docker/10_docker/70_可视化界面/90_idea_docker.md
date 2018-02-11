@@ -33,11 +33,57 @@
     1.win10本地 ,选择tcp socket ,和默认url ,无需证书文件
     
     
-    
 设置成功可以看到connection successful 字样    
     
-        
+## 设置docker注册中心
+
+    设置地址和验证信息
+
+
+# idea操作
+
+## 进入界面
+
+    view --> tool windows --> docker         
     
+## 操作镜像
+
+
+### pull push
+
+
+### 创建并启动 * 
+
+界面
+
+    1.简单方式      
+        界面--镜像右键创建
+        功能--直接使用内置dockerfile启动
+    2.多样启动
+        界面--点击docker主机,选择deploy(左边菜单,三个箭头的图标)
+        功能--可以选择dockerfile.dockercompose启动
+
+参数设置
+
+    选择服务器,镜像名,容器名
+    配置dockerfile
+    配置执行命令   直接写完整即可
+    配置端口
+
+## 操作container
+
+界面
+    
+    右键容器
+    
+操作
+
+    inspect  查看容器Config
+    exec     连接容器,执行命令
+           
+
+
+
 
 
 

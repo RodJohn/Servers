@@ -72,6 +72,7 @@
     exec 格式：
         RUN ["可执行文件", "参数1", "参数2"]，
         这更像是函数调用中的格式。
+    注意,空格    
 
 格式说明
 
@@ -120,5 +121,9 @@
 
 命令
 
-    ENTRYPOINT 指令的格式和 RUN 相似，也是shell和exec两种.
+    
+    
+示例
+
+    ENTRYPOINT [ "java","-jar","app.jar" ]    
 
