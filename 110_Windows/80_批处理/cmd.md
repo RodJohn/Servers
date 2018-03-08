@@ -3,6 +3,8 @@
 
 
 
+
+
 先使用tasklist 命令查看当前系统中的进程列表，然后针对你要杀的进程使用taskkill命令
 tasklist /fi "imagename eq nginx.exe"
 
