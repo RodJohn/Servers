@@ -1,3 +1,61 @@
+
+
+
+
+
+
+
+
+
+
+
+
+暂存
+
+每次在执行完yum命令后，系统都会把需要用到的rpm包放在/var/cache/yum/这个目录下，但下载源的不同还是会放在不同源目录下。
+
+清除暂存中rpm包文件  yum clean packages 
+清除暂存中rpm头文件 
+#yum clearn headers 
+清除暂存中旧的rpm头文件 
+#yum clean oldheaders 
+清除暂存中旧的rpm头文件和包文件 
+#yum clearn 或#yum clearn all 
+注:相当于yum clean packages + yum clean oldheaders 
+
+
+
+
+# 6 使用
+
+
+## 6.1 查找/查看
+
+yum search <keyword>
+yum search all <keyword>
+yum list | grep  <keyword>
+根据关键字查找RPM安装包
+yum info package1 
+
+#显示安装包信息package1
+
+yum list installed  | grep 
+
+
+安装/升级/删除
+yum install package1 
+安装指定的安装包package1
+安装位置是在/bin
+
+yum update package1
+ #更新指定程序包package1
+
+yum remove | erase package1 
+#删除程序包package1
+
+
+
+
 概述
 Yum（全称为 Yellow dog Updater, Modified）
 是一个在Fedora和RedHat以及CentOS中的RPM包管理器。
@@ -27,76 +85,6 @@ exclude=selinux*       		  #屏蔽不想更新的RPM包，可用通配符，多�
 
 /etc/yum.repos.d
 
-
-
-
-yum源
-
-可以同时配置多个资源库(Repository),并通过插件自动选择最快的源
-
-查看当前yum源列表
-yum repolist
-
-新增源
-添加epel源
-软件多
-安装步骤
-1.打开 http://mirrors.kernel.org/fedora-epel/
-2.根据 需要获取rpm包的url
-   安装命令：rpm -Uvh ........noarch.rpm
-5.最快方法：
-yum  install epel-release
-添加163yum源
-网易（163）yum源是国内最好的yum源之一 ，无论是速度还是软件版本，都非常的不错。
-http://www.runoob.com/linux/linux-yum.html
-
-fastestmirror 
-由于yum中有的mirror速度是非常慢的，如果yum选择了这个mirror，这个时候yum就会非常慢，
-对此，可以下载fastestmirror插件，它会自动选择最快的mirror： 
-
-#yum install yum-fastestmirror 
-配置文件：（一般不用动）/etc/yum/pluginconf.d/fastestmirror.conf 
-你的yum镜像的速度测试记录文件：/var/cache/yum/timedhosts.txt 
-
-暂存
-
-每次在执行完yum命令后，系统都会把需要用到的rpm包放在/var/cache/yum/这个目录下，但下载源的不同还是会放在不同源目录下。
-
-清除暂存中rpm包文件  yum clean packages 
-清除暂存中rpm头文件 
-#yum clearn headers 
-清除暂存中旧的rpm头文件 
-#yum clean oldheaders 
-清除暂存中旧的rpm头文件和包文件 
-#yum clearn 或#yum clearn all 
-注:相当于yum clean packages + yum clean oldheaders 
-
-
-
-常用功能
-
-查找/查看
-
-yum search <keyword>
-yum search all <keyword>
-yum list | grep  <keyword>
-根据关键字查找RPM安装包
-yum info package1 
-#显示安装包信息package1
-
-yum list installed  | grep 
-
-
-安装/升级/删除
-yum install package1 
-安装指定的安装包package1
-安装位置是在/bin
-
-yum update package1
- #更新指定程序包package1
-
-yum remove | erase package1 
-#删除程序包package1
 
 
 
@@ -133,25 +121,6 @@ exclude=selinux*       		  #屏蔽不想更新的RPM包，可用通配符，多�
 
 
 
-yum源
-
-可以同时配置多个资源库(Repository),并通过插件自动选择最快的源
-
-查看当前yum源列表
-yum repolist
-
-新增源
-添加epel源
-软件多
-安装步骤
-1.打开 http://mirrors.kernel.org/fedora-epel/
-2.根据 需要获取rpm包的url
-   安装命令：rpm -Uvh ........noarch.rpm
-5.最快方法：
-yum  install epel-release
-添加163yum源
-网易（163）yum源是国内最好的yum源之一 ，无论是速度还是软件版本，都非常的不错。
-http://www.runoob.com/linux/linux-yum.html
 
 fastestmirror 
 由于yum中有的mirror速度是非常慢的，如果yum选择了这个mirror，这个时候yum就会非常慢，

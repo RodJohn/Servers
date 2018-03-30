@@ -17,7 +17,7 @@ centos7 会显示 服务是否激活
 关闭指令:service iptables stop  
  
 
-2.安装服务
+# 安装服务
 
 开启防火墙服务(Centos7)
 在centos7中默认使用firewall,没有使用iptables service,在查看防火墙服务时,发现未初始化
